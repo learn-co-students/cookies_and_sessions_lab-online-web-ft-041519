@@ -1,0 +1,11 @@
+<h1>Your Cart</h1>
+<%= form_tag(controller:"products", action:"add", method:"post") do %>
+    <%= text_field_tag :product %>
+    <%= button_tag "add to cart" %>
+<% end %>
+
+<ul>  
+  <% @cart.each do |product| %>
+    <li><%= product %></li>
+  <% end %>
+</ul>
