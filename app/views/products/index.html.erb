@@ -1,0 +1,14 @@
+<%= form_tag ({controller: 'products',
+    action: 'create',
+    method: 'post'}) do %>
+
+  <input name=product>
+  <input type=submit value='add to cart'>
+<% end %>
+
+User's Current Cart <br>
+
+<%if current_cart %>
+
+    <%= current_cart %>
+<%end%>
